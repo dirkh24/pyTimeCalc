@@ -74,18 +74,18 @@ class MyApp(ttk.Frame):
 
         # row 3
         # Button to grap the actual time (Starttime)
-        self.getTimeStart = ttk.Button(self, text="Actual Time")
+        self.getTimeStart = ttk.Button(self, text="Current Time")
         self.getTimeStart.grid(column=0, row=3, columnspan=1, padx=10, pady=10)
-        self.getTimeStart["command"] = self.get_actual_start_time
+        self.getTimeStart["command"] = self.set_current_start_time
 
         # Checkbox to note a pause
         self.checkbox = ttk.Checkbutton(self, text="Pause (0:45h)", var=self.chkValue)
         self.checkbox.grid(column=1, row=3, columnspan=2, padx=10, pady=10)
 
         # Button to grap the actual time (Endtime)
-        self.getTimeEnd = ttk.Button(self, text="Actual Time")
+        self.getTimeEnd = ttk.Button(self, text="Current Time")
         self.getTimeEnd.grid(column=3, row=3, columnspan=1, padx=10, pady=10)
-        self.getTimeEnd["command"] = self.get_actual_end_time
+        self.getTimeEnd["command"] = self.set_current_end_time
 
         # row 4
         self.label7 = ttk.Label(self, text="Hour")
@@ -120,14 +120,14 @@ class MyApp(ttk.Frame):
         minute = now.strftime("%M")
         return (hour, minute)
 
-    def get_actual_start_time(self):
+    def set_current_start_time(self):
         hour, minute = self.get_current_time()
         # set the widgets
         self.hour1.set(hour)
         self.minute1.set(minute)
         
 
-    def get_actual_end_time(self):
+    def set_current_end_time(self):
         hour, minute = self.get_current_time()
         # set the widgets
         self.hour2.set(hour)
