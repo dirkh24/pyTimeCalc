@@ -1,5 +1,5 @@
 # pyTimeCalc
-A tiny little time calculation tool to calculate the time difference between to times. A starting time and an end time. 
+A tiny little time calculation tool to calculate the time difference between a starting time and an end time.
 
 # The user interface
 
