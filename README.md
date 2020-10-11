@@ -13,3 +13,12 @@ Description of the user interface
 * Checkbox Pause: With the checkbox "Pause" you can consider an individual pause
 
 * Button Calc: Start the calculation of the time difference between the starting time and the end time.
+
+# Make a standalone version with pyinstaller
+
+With pyinstaller (https://www.pyinstaller.org/) you kann make a standalone executable for Windows, Mac or Linux. 
+
+First you have to install pyinstaller with `pip install pyinstaller`. 
+To make a Windows executable use this command `pyinstaller  -F -w pyTimeCalc.py` in the pyTimeCalc directory.
+
+  
