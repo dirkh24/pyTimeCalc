@@ -117,6 +117,8 @@ class MyApp(ttk.Frame):
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         hour = now.strftime("%H")
+        # we have to strip the zeros at the beginning
+        hour = str(int(hour))
         minute = now.strftime("%M")
         return (hour, minute)
 
@@ -153,10 +155,11 @@ class MyApp(ttk.Frame):
         t2_hour=int(hour1)
         t2_min=int(minute1)
 
+        print(t1_hour)
         t1_year=2020
         t1_mon=1
         t1_day=1
-        t1_sec=00
+        t1_sec=0
         t1_msec=0
         t1_wday=0
         t1_yday=0
@@ -167,7 +170,7 @@ class MyApp(ttk.Frame):
         t2_year=2020
         t2_mon=1
         t2_day=1
-        t2_sec=00
+        t2_sec=0
         t2_msec=0
         t2_wday=0
         t2_yday=0
