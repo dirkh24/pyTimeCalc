@@ -117,9 +117,10 @@ class MyApp(ttk.Frame):
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         hour = now.strftime("%H")
-        # we have to strip the zeros at the beginning
-        hour = str(int(hour))
         minute = now.strftime("%M")
+        # we have to strip the leading zero
+        hour = str(int(hour))
+        minute = str(int(minute))
         return (hour, minute)
 
     def set_current_start_time(self):
